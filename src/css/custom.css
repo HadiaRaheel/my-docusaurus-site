@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
@@ -200,21 +202,46 @@
 /* Changes that have been made after the Git First Push.*/
 
 /* Custom styles for Previous/Next buttons */
+
+/* Modern shadcn-style Previous/Next buttons */
 .pagination-nav__link {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 16px 24px;
-  background: white;
-  color: #1e293b;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 20px 28px;
+  background: #ffffff;
+  color: #09090b;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.pagination-nav__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #fafafa 0%, #f4f4f5 100%);
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  z-index: -1;
 }
 
 .pagination-nav__link:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #d4d4d8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pagination-nav__link:hover::before {
+  opacity: 1;
+}
+
+.pagination-nav__link:active {
   transform: translateY(-1px);
 }
 
@@ -227,13 +254,57 @@
 }
 
 .pagination-nav__sublabel {
-  color: #64748b;
+  color: #71717a;
   font-size: 0.875rem;
   font-weight: 500;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .pagination-nav__label {
-  color: #1e293b;
+  color: #09090b;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .pagination-nav__link {
+  background: #18181b;
+  border-color: #27272a;
+  color: #fafafa;
+}
+
+[data-theme='dark'] .pagination-nav__link::before {
+  background: linear-gradient(135deg, #1f1f23 0%, #27272a 100%);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: #3f3f46;
+}
+
+[data-theme='dark'] .pagination-nav__sublabel {
+  color: #a1a1aa;
+}
+
+[data-theme='dark'] .pagination-nav__label {
+  color: #fafafa;
+}
+
+/* Additional modern touches */
+.pagination-nav {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 996px) {
+  .pagination-nav__link {
+    padding: 16px 20px;
+  }
+  
+  .pagination-nav__label {
+    font-size: 1rem;
+  }
 }
