@@ -3,7 +3,12 @@ id: info
 title: Info
 ---
 
+[<img src="/img/logohome.png" alt="Comrades Cafe" width="30" length="30" />](/)
+
+
 # Info
+
+**Welcome to Comrades Cafe - where community meets great coffee and delicious food!**
 
 Here you can find important information about our cafe, including:
 
@@ -25,4 +30,15 @@ Become a member and enjoy perks:
 
 ![INformation](info.png) 
 
-Signup at the counter or online!
+## What Makes Us Special ✨
+
+Freshly brewed coffee using premium beans
+Homemade desserts and pastries
+Cozy atmosphere perfect for studying or meeting friends
+Community events and workshops
+Free WiFi for all customers
+
+## Our Mission 🎯
+To create a space where everyone feels welcome, whether you're grabbing a quick coffee, studying for exams, meeting friends, or hosting your next event.
+
+**We look forward to serving you!**

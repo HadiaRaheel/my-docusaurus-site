@@ -3,13 +3,15 @@ id: events
 title: Events & Catering
 ---
 
+[<img src="/img/logohome.png" alt="Comrades Cafe" width="30" length="30" />](/) 
+
 # Events & Catering
 
 Welcome to Comrades Cafe! We offer a variety of services for your special occasions.
 
 ![Events](event.png) 
 
-## Upcoming Events
+## Upcoming Events 🎉
 Join us for these exciting events:
 - **Live Acoustic Night** (Every Friday)
 - **Latte Art Workshop** (1st Saturday of each month)
@@ -17,14 +19,14 @@ Join us for these exciting events:
 
 Visit our events page for RSVP info.
 
-## Private Events
+## Private Events 🏢
 We host:
 - Birthday parties
 - Business meetings
 - Study groups
 - Book clubs
 
-## Catering Services
+## Catering Services 🍽️
 We offer customizable catering services for:
 - Corporate events
 - Birthdays

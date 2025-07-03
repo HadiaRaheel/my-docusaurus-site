@@ -65,7 +65,7 @@ const config = {
       position: 'left',
     },       
     { 
-      to: '/docs/Events', 
+      to: '/docs/events', 
       label: 'Events', 
       position: 'left' 
     },
@@ -85,7 +85,7 @@ const config = {
       position: 'left' 
     },
     {
-      href: 'https://github.com/comrades-cafe',
+      href: 'https://github.com/HadiaRaheel/my-docusaurus-site',
       label: 'GitHub',
       position: 'right',
     },
@@ -120,15 +120,15 @@ footer: {
       items: [
         {
           label: 'Terms',
-          to: '/terms',
+          to: '/doc/terms',
         },
         {
           label: 'Privacy',
-          to: '/privacy',
+          to: '/doc/privacy',
         },
         {
           label: 'Cookies',
-          to: '/cookies',
+          to: '/doc/cookies',
         },
       ],
     },
