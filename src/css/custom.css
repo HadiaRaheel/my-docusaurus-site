@@ -196,3 +196,44 @@
   font-size: 1rem; 
   font-weight: 500;
 }
+
+/* Changes that have been made after the Git First Push.*/
+
+/* Custom styles for Previous/Next buttons */
+.pagination-nav__link {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background: white;
+  color: #1e293b;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pagination-nav__link:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.pagination-nav__link--next {
+  margin-left: auto;
+}
+
+.pagination-nav__link--prev {
+  margin-right: auto;
+}
+
+.pagination-nav__sublabel {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pagination-nav__label {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1rem;
+}
