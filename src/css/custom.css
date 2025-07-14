@@ -199,112 +199,213 @@
   font-weight: 500;
 }
 
+
 /* Changes that have been made after the Git First Push.*/
-
 /* Custom styles for Previous/Next buttons */
-
-/* Modern shadcn-style Previous/Next buttons */
-.pagination-nav__link {
-  border: 1px solid #e4e4e7;
-  border-radius: 12px;
-  padding: 20px 28px;
-  background: #ffffff;
-  color: #09090b;
+/* Next button styled like "Get Started" button */
+.pagination-nav__link--next {
+  background: #f97316; 
+  color: #ffffff;
+  border: 1px solid #f97316;
+  border-radius: 8px;
+  padding: 18px 16px;
   text-decoration: none;
   transition: all 0.15s ease-in-out;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
-}
-
-.pagination-nav__link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, #fafafa 0%, #f4f4f5 100%);
-  opacity: 0;
-  transition: opacity 0.15s ease-in-out;
-  z-index: -1;
-}
-
-.pagination-nav__link:hover {
-  border-color: #d4d4d8;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.pagination-nav__link:hover::before {
-  opacity: 1;
-}
-
-.pagination-nav__link:active {
-  transform: translateY(-1px);
-}
-
-.pagination-nav__link--next {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-width: 370px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  box-sizing: border-box;
   margin-left: auto;
+  text-align: right;
+  font-weight: 600;
+}
+
+.pagination-nav__link--next:hover {
+  background: #ea580c; 
+  border-color: #ea580c;
+  color: #ffffff;
+}
+
+.pagination-nav__link--next:active {
+  transform: translateY(1px);
 }
 
 .pagination-nav__link--prev {
+  background: #ffffff;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 18px 16px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-width: 370px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
   margin-right: auto;
+  text-align: left;
+  font-weight: 500;
+}
+
+.pagination-nav__link--prev:hover {
+  border-color: #d4d4d8;
+  background: #f9f9f9;
+  color: #09090b;
+}
+
+.pagination-nav__link--prev:active {
+  transform: translateY(1px);
+}
+
+.pagination-nav__link {
+  border-radius: 8px;
+  padding: 18px 16px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-width: 370px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .pagination-nav__sublabel {
-  color: #71717a;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 4px;
-  text-transform: uppercase;
+  margin-bottom: 5px;
   letter-spacing: 0.5px;
 }
 
+.pagination-nav__link--next .pagination-nav__sublabel {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pagination-nav__link--prev .pagination-nav__sublabel {
+  color: #71717a;
+}
+
 .pagination-nav__label {
-  color: #09090b;
   font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.4;
+  font-size: 1.0rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.pagination-nav__link--next .pagination-nav__label {
+  color: #ffffff;
+}
+
+/* Previous button label styling - changed from green to blue */
+.pagination-nav__link--prev .pagination-nav__label {
+  color: #FF7F00;
 }
 
 /* Dark mode styles */
-[data-theme='dark'] .pagination-nav__link {
+[data-theme='dark'] .pagination-nav__link--next {
+  background: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .pagination-nav__link--next:hover {
+  background: #ea580c;
+  border-color: #ea580c;
+}
+
+[data-theme='dark'] .pagination-nav__link--next .pagination-nav__sublabel {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .pagination-nav__link--next .pagination-nav__label {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .pagination-nav__link--prev {
   background: #18181b;
   border-color: #27272a;
   color: #fafafa;
 }
 
-[data-theme='dark'] .pagination-nav__link::before {
-  background: linear-gradient(135deg, #1f1f23 0%, #27272a 100%);
-}
-
-[data-theme='dark'] .pagination-nav__link:hover {
+[data-theme='dark'] .pagination-nav__link--prev:hover {
   border-color: #3f3f46;
+  background: #1f1f23;
 }
 
-[data-theme='dark'] .pagination-nav__sublabel {
+[data-theme='dark'] .pagination-nav__link--prev .pagination-nav__sublabel {
   color: #a1a1aa;
 }
 
-[data-theme='dark'] .pagination-nav__label {
-  color: #fafafa;
+/* Dark mode previous button label - changed from green to blue */
+[data-theme='dark'] .pagination-nav__link--prev .pagination-nav__label {
+  color: #FF7F00;
 }
 
-/* Additional modern touches */
+/* Navigation container */
 .pagination-nav {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 100%;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Responsive design */
 @media screen and (max-width: 996px) {
+  .pagination-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
   .pagination-nav__link {
-    padding: 16px 20px;
+    padding: 10px 12px;
+    min-width: 100px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .pagination-nav__link--next {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .pagination-nav__link--prev {
+    margin-right: 0;
+    order: 1;
   }
   
   .pagination-nav__label {
-    font-size: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .pagination-nav__sublabel {
+    font-size: 0.7rem;
+  }
+}
+
+/* Ensure pagination doesn't interfere with sidebar layout */
+@media screen and (min-width: 997px) {
+  .pagination-nav {
+    margin-right: 1rem;
+    padding-right: 1rem;
   }
 }
